@@ -1,0 +1,119 @@
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #232946 0%, #1f2a44 100%);
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-gap: 18px;
+  justify-content: center;
+  margin: 30px auto 20px auto;
+  perspective: 1200px;
+}
+.card {
+  width: 90px;
+  height: 120px;
+  background: linear-gradient(135deg, #232946 60%, #06d6a0 100%);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  will-change: transform;
+  user-select: none;
+  border: 2px solid #fff2;
+}
+.card.flipped {
+  background: #fff;
+  color: #232946;
+  transform: rotateY(180deg) scale(1.08);
+  box-shadow: 0 12px 32px rgba(6,214,160,0.18);
+  border: 2px solid #06d6a0;
+  z-index: 2;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ef476f 60%, #ffd166 100%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(239,71,111,0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover {
+/* Footer styling */
+#demo-footer {
+  margin: 0 auto 18px auto;
+  padding: 12px 0 6px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ef476f 0%, #ffd166 40%, #06d6a0 70%, #118ab2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 2px 12px #ffd16688, 0 0px 2px #23294644;
+  border-radius: 0 0 18px 18px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  animation: demo-pop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes demo-pop {
+  0% { opacity: 0; transform: scale(0.7) translateY(-40px); }
+  60% { opacity: 1; transform: scale(1.15) translateY(8px); }
+  80% { transform: scale(0.98) translateY(0px); }
+  100% { opacity: 1; transform: scale(1) translateY(0px); }
+}
+}
+  background: linear-gradient(90deg, #ffd166 60%, #ef476f 100%);
+  transform: scale(1.07);
+}
+
+h1 {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 2.5rem;
+  margin-top: 32px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #06d6a0 40%, #ef476f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffd166;
+  font-weight: 600;
+}
+
+@keyframes win-bounce {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.15) rotate(-2deg); }
+  40% { transform: scale(0.95) rotate(2deg); }
+  60% { transform: scale(1.12) rotate(-1deg); }
+  80% { transform: scale(0.98) rotate(1deg); }
+  100% { transform: scale(1); }
+}
+
+.card.win {
+  animation: win-bounce 0.7s ease;
+  box-shadow: 0 0 32px 8px #ffd16688;
+}
