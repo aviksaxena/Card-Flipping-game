@@ -10,9 +10,9 @@ The goal is to flip two cards at a time and find all the matching pairs.
 - Restart/Reset option to play again.
 
  Tech Stack
-- **HTML5** for structure  
-- **CSS3** for styling & animations  
-- **JavaScript (ES6)** for game logic  
+- **HTML** for structure  
+- **CSS** for styling & animations  
+- **JavaScript** for game logic  
 
  How to Play
 1. Click on a card to flip it.  
